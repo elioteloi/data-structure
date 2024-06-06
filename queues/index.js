@@ -1,44 +1,44 @@
 // FIFO - data structure. First-In-First-Out
 
-let Queue = [];
+let queue = [];
 
 let temp = [];
 
 
-class queue {
+class Queue {
   constructor(array) {
     this.array = array
   }
 
-  Enqueue() {
+  enqueue() {
     for (let index = 0; index < this.array.length; index++) {
-      Queue[Queue.length] = this.array[index];
+      queue[queue.length] = this.array[index];
     }
-    console.log("queue", Queue);
+    console.log("queue", queue);
     console.log("-------------------------------------------------------------------------");
   }
 
   
 
-  Dequeue() {
-    for (let index = 0; index < Queue.length; index++) {
+  dequeue() {
+    for (let index = 0; index < queue.length; index++) {
       if (index === 0) {
-        temp[temp.length] = Queue[0];
+        temp[temp.length] = queue[0];
       }
-      Queue[index] = Queue[index + 1];
+      queue[index] = queue[index + 1];
     }
-    Queue.length = Queue.length - 1;
+    queue.length = queue.length - 1;
   
     console.log("temp", temp);
-    console.log("Dequeue", Queue);
+    console.log("Dequeue", queue);
   }
 }
-const array = new queue([66, 0, 5, 756, 87, 93, 543])
+const array = new Queue([66, 0, 5, 756, 87, 93, 543])
 
-array.Enqueue()
+array.enqueue()
 
-array.Dequeue()
-array.Dequeue()
+array.dequeue()
+array.dequeue()
 
 
 // function Enqueue(array) {
